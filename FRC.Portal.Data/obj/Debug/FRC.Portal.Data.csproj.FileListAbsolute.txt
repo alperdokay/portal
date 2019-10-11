@@ -1,0 +1,13 @@
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\bin\Debug\FRC.Portal.Data.dll.config
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\bin\Debug\FRC.Portal.Data.dll
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\bin\Debug\FRC.Portal.Data.pdb
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\bin\Debug\Core.dll
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\bin\Debug\EntityFramework.dll
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\bin\Debug\Core.pdb
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\bin\Debug\EntityFramework.xml
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\obj\Debug\FRC.Portal.Data.csprojResolveAssemblyReference.cache
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\obj\Debug\FRC.Portal.Data.csproj.CoreCompileInputs.cache
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\obj\Debug\FRC.Portal.Data.dll
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Data\obj\Debug\FRC.Portal.Data.pdb

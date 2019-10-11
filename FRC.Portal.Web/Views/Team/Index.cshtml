@@ -1,0 +1,131 @@
+﻿@model IEnumerable<FRC.Portal.Data.Domains.Team>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    int a = 1;
+}
+<!-- start page content -->
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">Takım Yönetimi</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li>
+                        <i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="@Url.Action("Index","Team")">Anasayfa</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">Takım Yönetimi</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- start new student list -->
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="card card-box">
+                    <div class="card-head">
+                        <header>Takımlar</header>
+                        <div class="tools">
+                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-6">
+                                <div class="btn-group">
+                                    <button id="addRow1" class="btn btn-info" onclick="window.location = '@Url.Action("Create","Team")'">
+                                        Yeni Ekle <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-wrap">
+                            <div class="table-responsive">
+                                <table class="table display product-overview mb-30" id="support_table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                No
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.TeamNumber)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.TeamName)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Email)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.School)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Status)
+                                            </th>
+                                            <th>
+                                                Üyeler
+                                            </th>
+                                            <th>İşlem</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @a
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.TeamNumber)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.TeamName)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Email)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.School)
+                                                </td>
+                                                <td>
+                                                    @if (item.Status == 10)
+                                                    {
+                                                        <span class="label label-success">Aktif</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="label label-danger">Pasif</span>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Index", "TeamMember", new {id = item.Id})" class="" data-to class="" data-toggle="tooltip" title="Members"><i class="fa fa-address-card"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Update", "Team", new {id = item.Id})" class="" data-toggle="tooltip" title="Edit"><i class="fa fa-check"></i></a>
+                                                    <a href="@Url.Action("Delete", "Team", new {id = item.Id})" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="fa fa-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                            a++;
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end new student list -->
+    </div>
+</div>
+<!-- end page content -->

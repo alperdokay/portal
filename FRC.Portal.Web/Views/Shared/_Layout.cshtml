@@ -1,0 +1,148 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FRC Portal - 2019</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+    <!-- icons -->
+    <link href="~/Theme/fonts/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Theme/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Theme/fonts/material-design-icons/material-icon.css" rel="stylesheet" type="text/css" />
+    <!--bootstrap -->
+    <link href="~/Theme/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Theme/assets/plugins/summernote/summernote.css" rel="stylesheet">
+    <!-- data tables -->
+    <link href="~/Theme/assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- Material Design Lite CSS -->
+    <link rel="stylesheet" href="~/Theme/assets/plugins/material/material.min.css">
+    <link rel="stylesheet" href="~/Theme/assets/css/material_style.css">
+    <!-- inbox style -->
+    <link href="~/Theme/assets/css/pages/inbox.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme Styles -->
+    <link href="~/Theme/assets/css/theme/light/theme_style.css" rel="stylesheet" id="rt_style_components" type="text/css" />
+    <link href="~/Theme/assets/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Theme/assets/css/theme/light/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Theme/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="~/Theme/assets/css/theme/light/theme-color.css" rel="stylesheet" type="text/css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="~/Theme/assets/img/favicon.ico" />
+</head>
+<body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
+    <div class="page-wrapper">
+        <!-- start header -->
+        <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner ">
+                <!-- logo start -->
+                <div class="page-logo">
+                    <a href="@Url.Action("Index","Event")">
+                        <span class="logo-icon material-icons fa-rotate-45">public</span>
+                        <span class="logo-default">FRC Portal</span>
+                    </a>
+                </div>
+                <!-- logo end -->
+                <ul class="nav navbar-nav navbar-left in">
+                    <li><a href="#" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
+                </ul>
+                <!-- start mobile menu -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span></span>
+                </a>
+                <!-- end mobile menu -->
+                <!-- start header menu -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="javascript:;" class="fullscreen-btn"><i class="fa fa-arrows-alt"></i></a></li>
+                        <!-- start manage user dropdown -->
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                @*@Html.Action("OnlineUserName", "Dashboard")*@
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="@Url.Action("Logout","Dashboard")">
+                                        <i class="icon-logout"></i> Çıkış Yap
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- end manage user dropdown -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end header -->
+        <!-- start page container -->
+        <div class="page-container">
+            <!-- start sidebar menu -->
+            <div class="sidebar-container">
+                <div class="sidemenu-container navbar-collapse collapse fixed-menu">
+                    <div id="remove-scroll" class="left-sidemenu">
+                        <ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false" data-auto-scroll="true"
+                            data-slide-speed="200" style="padding-top: 20px">
+                            <li class="sidebar-toggler-wrapper hide">
+                                <div class="sidebar-toggler">
+                                    <span></span>
+                                </div>
+                            </li>
+                            <li class="sidebar-user-panel">
+                                @*@Html.Action("OnlineUserDetails", "Dashboard")*@
+                            </li>
+                            @Html.Action("Menu", "Dashboard")
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end sidebar menu -->
+            @RenderBody()
+            <!-- start chat sidebar -->
+            <!-- start footer -->
+            <div class="page-footer">
+                <div class="page-footer-inner">
+                    2019 &copy; FRC Portal - Fikret Yüksel Foundation
+                    <a href="mailto:portal@fikretyukselfoundation.org" target="_top" class="makerCss">Sorun veya Görüş Bildir!</a>
+                </div>
+                <div class="scroll-to-top">
+                    <i class="icon-arrow-up"></i>
+                </div>
+            </div>
+            <!-- end footer -->
+        </div>
+    </div>
+    <!-- start js include path -->
+    <script src="~/Theme/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="~/Theme/assets/plugins/popper/popper.js"></script>
+    <script src="~/Theme/assets/plugins/jquery-blockui/jquery.blockui.min.js"></script>
+    <script src="~/Theme/assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- bootstrap -->
+    <script src="~/Theme/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Theme/assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <script src="~/Theme/assets/plugins/sparkline/jquery.sparkline.js"></script>
+    <script src="~/Theme/assets/js/pages/sparkline/sparkline-data.js"></script>
+    <!-- Common js-->
+    <script src="~/Theme/assets/js/app.js"></script>
+    <script src="~/Theme/assets/js/layout.js"></script>
+    <script src="~/Theme/assets/js/theme-color.js"></script>
+    <!-- material -->
+    <script src="~/Theme/assets/plugins/material/material.min.js"></script>
+    <!-- chart js -->
+    <script src="~/Theme/assets/plugins/chart-js/Chart.bundle.js"></script>
+    <script src="~/Theme/assets/plugins/chart-js/utils.js"></script>
+    <script src="~/Theme/assets/js/pages/chart/chartjs/home-data.js"></script>
+    <!-- summernote -->
+    <script src="~/Theme/assets/plugins/summernote/summernote.js"></script>
+    <script src="~/Theme/assets/js/pages/summernote/summernote-data.js"></script>
+    <!-- end js include path -->
+    <!-- data tables -->
+    <script src="~/Theme/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Theme/assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Theme/assets/js/pages/table/table_data.js"></script>
+</body>
+</html>

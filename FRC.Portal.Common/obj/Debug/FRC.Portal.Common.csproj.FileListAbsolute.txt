@@ -1,0 +1,6 @@
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Common\bin\Debug\FRC.Portal.Common.dll
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Common\bin\Debug\FRC.Portal.Common.pdb
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Common\obj\Debug\FRC.Portal.Common.csprojResolveAssemblyReference.cache
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Common\obj\Debug\FRC.Portal.Common.csproj.CoreCompileInputs.cache
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Common\obj\Debug\FRC.Portal.Common.dll
+C:\Users\alperdokay\source\repos\FRC.Portal.FikretYukselFoundation\FRC.Portal.Common\obj\Debug\FRC.Portal.Common.pdb

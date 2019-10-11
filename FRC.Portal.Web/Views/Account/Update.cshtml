@@ -1,0 +1,79 @@
+﻿@using FRC.Portal.Common.Enums
+@model FRC.Portal.Data.Domains.Account
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    EnumAccountTypes.Roles role = (EnumAccountTypes.Roles)Model.UserRole;
+}
+@using (Html.BeginForm())
+{
+    <!-- start page content -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+                        <div class="page-title">Kullanıcı Düzenle</div>
+                    </div>
+                    <ol class="breadcrumb page-breadcrumb pull-right">
+                        <li>
+                            <i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="@Url.Action("Index", "Event")">Anasayfa</a>&nbsp;<i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a class="parent-item" href="@Url.Action("Index", "Account")">Kullanıcı</a>&nbsp;<i class="fa fa-angle-right"></i>
+                        </li>
+                        <li class="active">Kullanıcı Düzenle</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="card card-box">
+                        <div class="card-head">
+                            <header>Kullanıcı Düzenle</header>
+                        </div>
+                        <div class="card-body " id="bar-parent1">
+                            <form class="form-horizontal">
+                                <div class="form-group row">
+                                    @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "col-sm-2 control-label", @for = "horizontalFormEmail" })
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Kullanıcı adı...", @id = "horizontalFormEmail" } })
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "col-sm-2 control-label", @for = "horizontalFormEmail" })
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Kullanıcı şifresi...", @id = "horizontalFormEmail", @type = "password" } })
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "col-sm-2 control-label", @for = "horizontalFormEmail" })
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Adı soyadı...", @id = "horizontalFormEmail" } })
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="horizontalFormEmail" class="col-sm-2 control-label">Rol</label>
+                                    <div class="col-sm-10">
+                                        @Html.DropDownListFor(model => model.UserRole, EnumHelper.GetSelectList(typeof(EnumAccountTypes.Roles)), "Durum", new { @class = "form-control", @id = "horizontalFormPassword" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="offset-md-2 col-md-10">
+                                        <button type="submit" class="btn btn-info m-r-20">Düzenle</button>
+                                        <button type="button" onclick="window.location = '@Url.Action("Index", "Account")'" class="btn btn-default">Listeye dön</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end page content -->
+}

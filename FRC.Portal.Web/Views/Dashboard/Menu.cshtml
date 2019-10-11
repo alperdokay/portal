@@ -1,0 +1,32 @@
+﻿@model FRC.Portal.Services.Models.DashboardUserViewModel
+
+<li class="nav-item start active open">
+    <a href="javascript:;" class="nav-link nav-toggle">
+        <i class="material-icons">list</i>
+        <span class="title">Takımlar</span>
+        <span class="arrow"></span>
+    </a>
+    <ul class="sub-menu">
+        <li class="nav-item">
+            <a href="@Url.Action("Index","Team")" class="nav-link ">
+                <span class="title">Takım Yönetim</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="@Url.Action("Index","Student")" class="nav-link ">
+                <span class="title">Öğrenciler</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="@Url.Action("Index","Student")" class="nav-link ">
+                <span class="title">Etkinlikler</span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item">
+    <a href="@Url.Action("Index","Account")" class="nav-link nav-toggle">
+        <i class="material-icons">face</i>
+        <span class="title">Kullanıcılar</span>
+    </a>
+</li>
